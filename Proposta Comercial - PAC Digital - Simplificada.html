@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)file:///C:/Users/renat/Downloads/Proposta_Comercial_PAC_Digital_v5.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposta Comercial - PAC Digital - FoodTech</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-dark: #0f172a;
+      --accent: #2563eb;
+      --accent-light: #eff6ff;
+      --success: #16a34a;
+      --warning: #d97706;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --border-color: #cbd5e1;
+      --bg-light: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text-dark);
+      background-color: #f1f5f9;
+      line-height: 1.5;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    /* Header with Logo */
+    header {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: #ffffff;
+      padding: 25px 30px;
+    }
+
+    .header-layout {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo-container {
+      background: #ffffff;
+      padding: 10px 18px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .logo-img {
+      max-height: 60px;
+      width: auto;
+      display: block;
+    }
+
+    .header-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .header-text h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+      color: #ffffff;
+    }
+
+    .header-text p {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      font-weight: 300;
+    }
+
+    .company-header-info {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 10px 15px;
+      margin-top: 15px;
+      font-size: 0.82rem;
+      color: #e2e8f0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 8px;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      background: var(--bg-light);
+      padding: 20px 30px;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.9rem;
+    }
+
+    .meta-item label {
+      display: block;
+      color: var(--primary-dark);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .editable-input {
+      width: 100%;
+      padding: 7px 10px;
+      border: 1px solid #94a3b8;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      color: #0f172a;
+      background-color: #ffffff;
+      font-family: inherit;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .editable-input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+
+    .content-padding {
+      padding: 30px;
+    }
+
+    .intro-card {
+      background: var(--accent-light);
+      border-left: 4px solid var(--accent);
+      padding: 18px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 30px;
+      font-size: 0.95rem;
+      color: #1e3a8a;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      color: var(--primary-dark);
+      margin-top: 30px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background-color: var(--accent);
+      border-radius: 2px;
+    }
+
+    /* Features Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
+      margin-bottom: 25px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      padding: 12px 14px;
+      border-radius: 8px;
+    }
+
+    .feature-icon {
+      background: var(--accent-light);
+      color: var(--accent);
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .feature-text strong {
+      display: block;
+      color: var(--primary-dark);
+      margin-bottom: 2px;
+      font-size: 0.92rem;
+    }
+
+    .feature-text p {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    /* Pricing Cards */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 20px;
+      margin-bottom: 35px;
+    }
+
+    .pricing-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .pricing-card.popular {
+      border: 2px solid var(--accent);
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.1);
+      background: #fdfefe;
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -11px;
+      right: 18px;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    .plan-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 6px;
+    }
+
+    .plan-price {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 2px;
+    }
+
+    .plan-price span {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+
+    .plan-setup {
+      font-size: 0.82rem;
+      color: var(--warning);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .plan-features-list {
+      list-style: none;
+      margin-top: 12px;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .plan-features-list li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+      font-size: 0.85rem;
+      color: var(--text-dark);
+    }
+
+    .plan-features-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--success);
+      font-weight: bold;
+    }
+
+    .btn-select-plan {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      background-color: var(--bg-light);
+      color: var(--primary-dark);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-select-plan:hover {
+      background-color: var(--accent-light);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .pricing-card.popular .btn-select-plan {
+      background-color: var(--accent);
+      color: #ffffff;
+      border: none;
+    }
+
+    .pricing-card.popular .btn-select-plan:hover {
+      background-color: #1d4ed8;
+    }
+
+    .plan-selector-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .plan-option-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 15px;
+      background: #ffffff;
+      border: 2px solid var(--border-color);
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      transition: all 0.2s ease;
+    }
+
+    .plan-option-label:hover {
+      border-color: var(--accent);
+      background: var(--accent-light);
+    }
+
+    .plan-option-label input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--accent);
+      cursor: pointer;
+    }
+
+    .plan-option-label.selected {
+      border-color: var(--accent);
+      background: var(--accent-light);
+      color: var(--primary);
+    }
+
+    /* Comparison Table */
+    .table-container {
+      overflow-x: auto;
+      margin-bottom: 35px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.85rem;
+    }
+
+    th {
+      background: var(--primary-dark);
+      color: #ffffff;
+      padding: 12px 14px;
+      font-weight: 600;
+    }
+
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-dark);
+    }
+
+    tr:nth-child(even) td {
+      background-color: var(--bg-light);
+    }
+
+    .check-icon {
+      color: var(--success);
+      font-weight: bold;
+    }
+
+    .detail-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 18px;
+      margin-bottom: 18px;
+    }
+
+    .detail-card h3 {
+      font-size: 1.02rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .info-list {
+      padding-left: 18px;
+      margin-top: 8px;
+      font-size: 0.88rem;
+    }
+
+    .info-list li {
+      margin-bottom: 8px;
+    }
+
+    .acceptance-box {
+      background: var(--bg-light);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 22px;
+      margin-top: 35px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .signature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .signature-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .signature-line-box {
+      border-top: 1px solid #94a3b8;
+      margin-top: 40px;
+      padding-top: 8px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-color);
+      background: var(--bg-light);
+    }
+
+    @media print {
+      body { padding: 0; background: #ffffff; }
+      .container { box-shadow: none; border-radius: 0; }
+      .editable-input { border: none; border-bottom: 1px solid #000; border-radius: 0; padding: 2px 0; background: transparent; }
+      .btn-select-plan { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="header-layout">
+      <!-- LOGO FOODTECH -->
+      <div class="logo-container">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAAC3CAYAAABjcIe/AAAQAElEQVR4AeydCZwcRfXHq3eTEP6Ev4DhEsRwmBBykoAkcmVDRAX9I3IIAQIBRMghoPxBBP6syCF4gGQTECGCGEABRVAkHLsJCgElkDsEIqAoCUcAuXLtbv+/b3d2M9vT3dMz29M1PfPmU2+6uo73Xv2q+nV1VXV1jdGfIqAIKAJVioAawCqteC22IqAIGKMGUFtB+SAwtXGYmdI4yUxp+qGZ3PQLjreaKY0zleLAoAksmx4wkx8bUT4Vbl+TqjaA9uFXDdoQOLtxAAbv+8Z1bjfGmW6MOc845hRjzMnGOBOV4sBAsDRfMrWmt9FfJwJqADuhUE/iCJzz+I5mypw/mhbneQzexcgfAqkrGQLOR6bFXVEy9ilkrAYwhZWWepWnPriZmdr4S9Pc8pox7mGpL09qCuC+ZqaPW5MadRNQVA1gAiCXpQhbSp352E6mdfPnjeucZEuFqpXrmKVVW/aAgqsBDABGg0uAwKS5A02PmhU87vYrAXdlmQ8B1/wtX5Jqi1cDWG01bqu8ZzT1NTXuHMRvAamzgkAb/lYkl6tQNYDlWjOVplcvcyfjfduVR7GqUQvnbdPqLKzGkoeVWQ1gGDoaFw8CUxrPh9E4SJ01BNz5ZkbdB9bEl6lgNYBlWjEVo9bkxkHGOFcb/dlGYK5tBcpRvhrAcqyVStKpxvlCJRUntWVxWjsmQFJbhFIorgawFKgqz2wEvpZ9on4rCLxjzPqnrEguc6FqAMu8glKt3qSm4cY1+6a6DBWhvPOcmXbYexVRlJgLoQYwZkCVXRYCjjM660y91hBofdqa6DIT7FVHDaAXET2PEQF3bIzMlFXRCDh/LTprhWdUA1jhFWy1eI4ZaVW+Cm9HwHVXtXv034uAGkAvInoeDwLfbBoMo10hdXYRWGdaNr5sV4XylV5VBrB8q6ECNWtxDqzAUqWvSI55xtz4+TfSp3gyGqsBTAbnKpTifqYKC11+RXZdXf8XUitqAEPA0ahuIOA4n+1Gbs0aFwJuzZ/jYlWJfNQAVmKt+pUpybBJcz9pjNs/SZEqyw8BZ4Nx3Xl+MRrWjoAawHYc9D9OBJyWT8TJTnkViYDrPmFm1K0uMndVZFMDWBXVnHAha8yghCWqOD8EHPdmv2AN24SAGsBNWKgvLgRanTKbAImrYKni8w/T9/G7UqWxBWXVAFoAveJF1ugrcNbr2HV/Y+rrW63rUeYKqAEs8wpKnXpnPbobA+9DU6d3ZSm81EwfK5vQVlapSlAaNYAlALWqWdb20NffbDcAt3VClgrqDUFADWAIOBpVFAJjisqlmeJBoNV80Uw/5Nl4mFU+FzWAlV/HyZbQdfdLVqBKy0LgODOj7qGsc/XmQUANYB6ANLoABCY17WAcM6yAHJo0HgTWGLd1pGmo+3U87CqHS76SqAHMh5DGR0egxt2fxD0gdYkg4GxAzMXm9Te318dekCjCqQEsAjTNEoCAq8tfApCJO/hdGNabvm9sSa/vCnP3sS2cqysCATWARYCmWQIQcMxKYuYYx71dKSYMjPkVmN5mjHMTwwuXGGP2xehtDX3P1B8rPUCC1BWLQEUbwGJB0XxFItBQdyMXZp2ZNnaCUkwYNNSdBKanmIYx3zDT6i43DXXPFFk7ms0HATWAPqBokCKgCFQHAmoAq6OetZSKgCLgg4AaQB9QKiJIC6EIKAJ5EVADmBciTaAIKAKVioAawEqtWS2XIqAI5EVADWBeiDRB+hBQjRWBaAioAYyGk6ZSBBSBCkRADWAFVqoWSRFQBKIhoAYwGk6aShFICwKqZwEIqAEsACxNqggoApWFgBrAyqpPLY0ioAgUgIAawALA0qSKgCJQ3ggUqp0awEIR0/SKgCJQMQioAayYqtSCKAKKQKEIqAEsFLE0pa9v6mGmzB1ipj52qJnSeJSZMmeimdJ0mpnaeKpSDBhMbjwDPM805z60TZqaheq6CYGKMoCbilXlvqmP7Y6xu828Zd40pnWRcWtmG+PcY4w70xhzs3GdW5RiwMBxfgae15v1m/XiqC6FCKgBTGGlBaosPZEpc2Zh8FZi7CaQbitIXWkRWGJm1K0urQjlXioE1ACWCtmk+U5tnGA29l6F4RuftOiqlue4T1V1+VNeeDWAKa/ANvWnNN5hXOc2jJ8+irUBkuCf68xNUJqKihkBNYAxA5o4uylzMHzO8YnLVYHtCNTUPNvu0f80IqAGMI211qHzlDlX0+uTsb6OED0mi8BCc/3BLyYrUqXFiYAawDjRTJLX5DlHYvzOT1Jk+cqypZn7V1uSVW48CKgBjAfHZLmc8cB/Gce9PlmhKi0HAcfoBEgOKOkKUAOYrvpq17bnFifi2RlSZxMBp/bPNsWr7O4joAaw+xha4FBzsgWhKrIrAi+WyfhfV630rCAE1AAWBFcZJJ4650Aefz9bBppUuQrOvCoHoCKKrwYwddXoHp46lStRYcddVInFqrYyqQFMW427zui0qVyR+raaf1dkuVJWqO6qqwawuwgmmf/M2dsZ4+6bpEiVFYCAU7M0IEaDU4SAGsAUVZap7bkP6m4OqbOLwD9Mw8GL7aqg0uNAQA1gHCgmxcMxo5ISpXJCEHCcp0NiNSpFCKTaAKYI55hUrTk4JkbKplsIuLr+r1v4lU9mNYDlUxfhmtTXU1furuGJNDYRBFrdvyUiR4WUHAEuqpLLUAFxIPDWZ3eAzY6QOrsI/Mts+7gaQLt1EJt0NYCxQVliRk7PvZDQA2p3+m8HAcd50tTXt9oRrlLjRkANYNyIlopfq6PLX0qFbSF8XffhQpJr2vJGQA1gedfPJu0cVydANqFhy/eq6WtusyVc5caPgBrA+DGNn+O5T8ravxHxM04rR1t6uw+Z+rpmW9JVbvwIqAGMH9P4OW7YMBym20LqrCJQO82qeBUeOwJqAGOHtAQM9fG3BKAWyNJ1JujbHwViloLkagBTUEnG6ASIsftrMNPH3G5XhU7p6okRATWAMYJZElZTH9zMGFf3/ysJuJGY3mca6qZGSqmJUoeAGsByr7LW3jL+J4ugy13TytPPMTdj/I6svIJpiToQUAPYgUS5Hmv08ddO1biTzbS6r9uRrVKDEIg7XA1g3IjGzc81+8XNUvkFIeDIGx5XGLelr2kYOyMolYZXDgJqAMu/Lj9V/iqmXsNnjOt81zg1O/DIe7GZPm5N6kukBYiEgBrASDDZTOTeiPQLjWumJE7GyPjXH5Bv0TnLjGPkM6BnxVJ+x0yFn9BE4zqHmlazI0ZvX2Z5rzLTDnrTYkFVtAUEUmUALeBjX2TD2Du4QH9gptdNT5wa6u4zxn3ZMghzGIubBQY3xlL+aXUN8BO61Uwf84iZUbfacvlUvEUE1ABaBD8dop09rerptD5tVb4Kr2gE1ABWdPV2s3CTmvrAQb5DwsGSc2r1+7uWoK8GsWoA01LLNvTs0bYEZ2sbojMyl5rrD34x49eDIhA7AmoAY4e0ghi2uJ+xWhrX6M7LViug8oWrAaz8Oi6+hI6xuwdhjZlbvPKaUxHIj4AawPwYVWeK+t/0MsYZaaz+Wv7aLl7/FYHSIKAGsDS4pp/rmm1HGONuZ7EgfzfTxi2zKF9FVwECagCroJKLK6JzYHH54srlPBEXJ+WjCAQhoAYwCJlqD2917U6AOK5OgLS3Qf0vIQJqAEsIbqpZO45dA9ji6ALoVDegdCivBjAd9ZSslpPmfpLxPyhZsVnS1puezf/MOlevIlASBNQAlgTWtDN1ZQNWx2Ip3jQ/PeQNi/JVdJkgUGo11ACWGuE08q9p3dey2jz+Oq5lHVR8FSCgBrAKKrmIIh5QRJ74sjhG3/+ND03lFIKAGsAQcKo3yrG7AYLrPlW92GvJk0SgrA1gkkCorAwCUxuH4fs0ZMutMn11BtgW+NUmVw1gtdV43vLW2F3+Ysyzpr6uOa+amkARiAEBNYAxgFhRLFotf4PYcZ+sKDy1MGWNgBrAcq0eW3o5Zn9botvktjiPtx31TxFIAAE1gAmAnBoRkx/tj642x//eNX16LkQHdYpAIgioAUwE5pQIcXrY7f0Z87S55oD3U4KWqlkBCKgBrIBKjK8IrmUD2LEDTHwlUk6KQBgCagDD0Km6OMfm4y9ot/6dP3WKQGIIqAFMDOoUCHLdXaxq6bgrrcpX4VWHgBrAqqvygAKf9ehuxjH9jLWf84KZdohugW+MtRqoRsFqAKux1v3KXFszyi84sTDHvSkxWSpIEcggoAYwA4QerG6B/w/zcfNTrQNFIGkE1AAmjXj5yrO3AYJj6o2+/mb0Z0zSGKgBTBrxcpR3TlM/1LJkAJ07zLS6W5GvThFIHAE1gIlDXoYCmx1bG6CuMm7zN8sQEVWpShBQA1glFR1aTNfdLzS+NJGrTEvLAWb6uDWlYa9cFYH8CJSVAcyvrqYoEQJjSsQ3iO3Tpu/cnc0N414KSqDhikASCKgBTALlcpYxqWkH4zhDElPRcS4zDXWjTH19a2IyVZAiEICAGsAAYKomuEbe/3V7lbi8q41x7zSuO9hMG3NpiWUpe0UgMgJqACNDVeKEttg7zsA20a6RXVg+wB9Ea4nLR+tIs9445i1jHHmr4xaM3uH0+HY0DWPHm+ljlxr9KQJlhIAawDKqDCuqtJjrTEuPbUzN2p2Ns3anQOphPmHyUUsPSbODWb/lJ0zDmP1MQ93pGL0Hjf4UgTJFQA1gmVZMYmrNqPvA3HDgO2baYe+F0nV175p8JHwkzU37bExMfxWkCHQDATWA3QBPs8aFgPJRBOwgoAbQDu4qVRFQBMoAATWAZVAJqoIioAjYQUANoB3cVaoi0IGAHi0ioAbQIvgqWhFQBOwioAbQLv4qXRFQBCwioAbQIvgqWhGodgRsl18NoO0aUPmKgCJgDQE1gNagV8GKgCJgGwE1gLZrQOUrAoqANQSsGkBrpVbBioAioAiAgBpAQFCnCCgC1YmAGsDqrHcttSKgCICAGkBAsOJUqCKgCFhHQA2g9SpQBRQBRcAWAiU1gHvttdfwIUOGnAKNHzRo0HFJ0ODBg89Ejq3PPNqqx1TJHTBgwJbSJqirE6mr4zieCh3uV4ihQ4ceSNozJJ1tQo9voM8oPz0rPYz6GQjJtRV4HYPPeGji3nvvvW1a8CipAaypqZnouu4vXNed5TjOnUkQwN8AnQ6pK1MEevXqtZO0CdS7XdoEx1s4b+CY41pbWy8g7meSzjahx43QN3OUrIIAsD+CYt7AMfA6BptZ0MwNGzYMJm0qXEkNIAhsgNQpAl0Q4Mbo90U437bCBdfSJbPlEy7wZssqlL146res6iwMsFIbwDDZGqcIdCKAoXM7T7I89AB9w7OSqFcRKBqBijSA3IGcohHRjIpAaRFQ7mWEgC0D+EcwuIW7fuB4QrFx8H2CXoN8khGvOkVAEVAEghGwYgDpoX17yZIlpy9evHh83ATfA5YuXXpzcJE1RhFQBBSBdgSsGEB6aFbkthdZ/xUBHx9SJwAAEABJREFURcAWAuUmVw1RudWI6qMIKAKJIaAGMDGoVVAxCDAWXG5ttNz0KQZWzZNBQCszA4QeyhaBjvWBcsxH6ylFoev0JL3ky8db4mFvOo7iV0o5AokawJRjpepbQKBHjx6n19bW7ozoXfIRE2C96TGeS7rITtJLPjLk5S96rFu37hzSqqsQBNQAVkhFVmoxFixY8O7ChQv/jZF6PR8JBq7r/keOUYkJuTWSNh9viRc9Vq5c+Z6kV6oMBNQA+tRjv379eg9p/x08ePDgz0GHQmMkSOJ8siQR5AwdOnQAOhwEjUOfQ/faa6+x0N6Eb5GEAl4ZyN0VXQ4SXTI0huPQ0aNHb+5Nm9Q5BrDQRfA949Qtg8k46uXoQYMGTcjQceD0Ffx14LN9nPLCeKHLAORJ2z0W+ROR//UMnUz4V/GLPp8M4xFXHPJkM4XDkXk8JPJPJOxI/HV77rnnx+OSUygfNYAZxOSipZGcQaXc36dPn9VcSIugOUQ/DM2GmjhfRNw7pHmIivv68OHDtyI8misyFXKOQt5voX/TW3keHeZCj8Budk1NzWPQs4S/Tfw89P8WjX474krm0GcYsqZDryH3JXSZizDBR6gJ/8L333//DdLdhz7jR44cGauBgX/ZObDYnrJewHFxBpNHqJe7eby+LUN3gtPv8Dei/GrSLSP9d8DmvziP1YH7MHhfi4y/o8vzMJd6+TXyZyL/pgzdSvi9+EWff5J2MVRP2xlAeKwOvl+DlsJ0GfQHZN4BifzbOf8t/kaGOQST36L3aMISdVVvALlT9wL4S+SipZH8DPS/DH0MCnK9ifg8FXdTc3OzGMMrx4wZ04OwWB2N5pvQ68i5B8ZHQjtCQa4XEaPQ/8c0+te5CGbJllOExeaGDRu2E/o8iT4LYDoJCtOnD+mOQJ9Z69evfw19jiJ9xbljjjmmFkyuoGByw/wBx6i7oAwEm6vA5kPyX0m+bjva8J7wmg3uC+At45S7FcBU9L6UtvM8PB6QzkABeXOSosPrEki9v8zxLmgvKMzJ9XMkej+J/JlhCeOOq2oDCNhnc6deD/CXAWwfqBh34VtvvbWRBnh1MZm9eWg0sj/eu4T/FCqqN0cDHN+zZ8/30OmOPfbY47/hU7QTQwqfu1taWv4Fk2Lu0H3R5x6wXs3N5jPwqAhHPZ2zfPlymUH+bjcLdCHYrIGf3HgLZiVPIeR/mDa8nMyHQt11X6IzsF83mLRgSK9Cp1XUe78i+Ewk77v0RkcVkbfgLFVrAGlwD4LWdVAsjgZ4foZn0fyoeHlMuRMGYT1QoqM5dDq+d+/ef6YxFT1GiCFthM/R0SQGpWoL356bzdOUceiHH374j7aQlP5Rhhu5uK+NUf1t4Hc/7WdyITyp1xE8hfyTPJ+DYnPU98ZuMKslrzyx7MCxWPcxjOifuGFuUyyDqPmq0gDSo3mMBvfFEJBkpm8R8bNpDDJeId1yMZhLCJPeGYdcJzy5OOb3YxIlNzY8hHw/JMVEKMitI0LGUR7l+CvoF9B9yHyOY9tMJkc/N5TGtHTgwIFhj6x++Qw6PUnEPpCfk22qXiXiQTCS3u/F+K/EfwdHeUyWtXV4c9xcjPK3CX0TSp0DE7lBfaMUilOXDbTNkVF4Yyz3p17nk3ZLqBLdVrW1tTKsUNKyWTGAVLRcPCUtWBBzGvD9XKRjA+L/SqP64pIlSz4GDYO+sHTp0okcT4MOh4ZAW5PmEPLLRc4hx41gokSMZU5EUACN/ibizoNyHLq+AB29bt26rZA9CPocdBJ0KnTk4sWLR3DsS+9qCOkey2HQHvApGtNyyh55BpK0sqNO0CPv7+gZbo/cXaDDweg7HK+ALsJ/Ase9+/btK+OAJyB+FZTtZOJIxs1Ss216h/JgIuN1x3Wcl+JIHc6V8dYw3vT8duUaksm5sGSpjwOLr4O59CZLVhYrBpDS7Ez3thfjF/3iIvjtka/hAOaFyA4aa/lfLtz9li1b9hBpQh1pGkm7N4lOgvycLC/4X78Ibxh38glS0d7wzPmNGJQB0L0rV64M6lG1JV20aNES0o3jwpDHIenBtoVn/cljtZQ/K8jfi05ykft9V6UZ/nIj+Opzzz0X2oObM2dOM8b5Dnqesszid/6S0hNK+5JxsUj4eUpV6OkWjLdKjzowHzdgmUGNfQY5UKDFCK6NgoYFClXVigGkULJMYD3jFy/HRfSAXqThBN4VacB7AI70PDh0cWs5q8Og/YhjQY488igqA89+r0ddw51aZtdCeWJQzvZLQPix8D/LLy4sDKPzKFgMJ80bkNedjU7Se/WGd56PHj16c2TL43hnWMazkfAR8C+od3v33Xe3UI6vUudnZPik8kAPWialour+Ngllv8tvg9mp+C+Cfg19BEVxJ3AT8rsBGZ4WvgOD/aGqcOB3CG029uU5HeBZMYAdwpM8AqT01nIWyXI33Z8LVNb7FaUOeWVNnm9jhXfonZwe6WkIHQF1cRiLyRiau7sEFnBCb/DljRs3Sg81560IdLomjNV77733f8TLq2ccNjnwOwydFm8KKcxH7/TnUq7CcpVHaqkndJceYBSFHqZN9IVOB6+fQL/AfyV0HDzGRGGQSfPVzLHzgB7bw+PSzoDCPGJ8HyfLLdD10Ex4yZCJ342S6NjcWtqOPFXJh69Enl9nIVQYHZvQm3Zo5jyR1WIAqQNHDKAXjlk8zsokgje8oHMat0yYnO+T6XP0PMNmw/y+XjcHYzHDh1dBQStWrHiNQst6PW++EfQixnkD5XzkyJE9yeOH0zQuZJl8kWRFU6ZcMnlTNA8bGTEUJ0eUu4i28HnS+o5xU/6/Efc9KK+jHoZ6E6GHLCOSdajeqLDzNeQbj15bQAdDp0NnQ6ehzziO2yNLJrp+DJOOCT5ZV8ppt91FAwcO3JK2I+Pqp4s8OO4Cyfgyh2iOJ5qCJ/CicTamKgwgd04ZSN3VA8q62traCzxhRZ8yKXArmT+Esl1PKs93IgEjJOGjshOLn/QyQyrebhMNT2ZkpYfahRcXhO+yFiZaZMHyTl0SG/N2jx49pFfoCS7ulAtOHgllNr04BgnnkhsYBiJq709WC4RquGHDBvn85wehidoj9/eu4UQP+TRle2y0/x+Cd18Mj8xcB+agncwn3XmbbbbZdsiYSvvobq9wFU8aMjl3pQyBZAtGjrzTvR9ypFeYHRXoR59urWUNZEyEFQNI4V9D9t8hWQ8WF8miVOEL2xwn43RdAgH1roULF/67S2A3TjKTAr/1sqCsQd13mazwJp/N4+uz3sBunsvraV1YUHYZD+0SJifomqMTYXcuWLCgo2cgybpN8JQlM93mkxAD6bFE6hFx0eftJb/wwgtvoXeUoYSP9e7duz9pO5yDJ6d+CAtyv8PY+D2VBKU38+fP34gxbOCpSF5dC0yXL4L6PQ0ez4WlI00hY+4lm/CxYgC5AKXrvQcV1C9G6gmvoAaSM85G5fwBitvlTMJQVpmQ8JPjt95LPhbll7boMC7Kp72ZaXxBK/R396blPMrFSrLoDvkyZBA9g8WU9MizjVCYJi2kncLTxuX07n/iR8RdA8lSmqivqYnxbZNJT3Qgns5z/KEOXeJcqB0qyxtJ/ebt4dIugzorXnYlPS+pAQzSHIB8x0iC0ncnnHEtuXvkNDgef3MMQ3fkSF4a3RNy9NAAHmU284QZDOOnvWGcz4PidjLeIrOS2Xx350KU5SnZYeL325VDFjtLXGxE/adpgwS/m4IfFvIGxJlEXETdnutHxMnSKFlKE2k9Jjw664O2lXdFAfw73DyeJP7ccZL0Eb2ltxoqlokNmZQJTdMRSXspmb2wYgCjANRR+O4e165d2xcenQ0Jv7jVzc3N3R3nED5eEp7veAL/m0cZWfzbGSxLTTgRvTh0uhaMsnfRcGdksR4eReRuLHp1YUEd+L1mlPPKHI1vdZeM1XdS1PvYccCE0eu8PqmvQhaOL4xDfil5MN6Y10iWUn4H706AOwIq7UjDyel9UcYPMAwFT8eTL9Rx15VJkPc9iXoxidBlfzwGwmVMyavXh6QTY+XJHstpzsJojG0XnTJSZFeOjLf9sHHjRm952iOq599bT4mVnMfE7GVMWxcguNrrLDJUFW8AudP4vdi9uWxlFBmliAkzPbv2XtSmPM3r+W06bfOJTkJtJ5m/3vRW/YxSJrpbh5ydbugB57xZws2ixSuFXogMIXiDq+k89htlVPDAXiYI25LTE5dH7DZ/hL+c+o6QpyqTVLwBxKjIRgHeWcztVqxY4X0s7nYD+Oijj+SxUiib13/QoctjMbNtH2FsRK/sdL1o8LE/bjF4Lr3NnLIi3zsuaJAvPdhsnQwXXqTxqi6ZKuskZ/ggoeJRRa5sQdYhrpCng5w1hB1M9NgVgYo3gBg6eRyQLYOyS96TQVh5UyI7rNt+eMpCVe/YxsuvvPKK7OTShT+GRTaL9Ib5zQx3SVPoCY/VMgPuNWKvLl++PGdygyvOe6MQA+hdF1ioCjnpKbu1XlWOMvkDVuZP0plClhz9kvLJhhu/B8+iCG5PwGPGkiVLOuuI80LGh/fnxncAfNTlQaDiDaCUn4aYs7aOBnW4xMVJ8PTbYmtBgIxnvOHoGbtOjCMd6JXD+UtQK+R1r3gD0Cnfbr7eLMaY8CB0ijqzGs4omVjZVj6qpEcwWicvXrz4iKVLl36lWILHAfCYki2Um6tshZYdFOqnN1/QGsBQZhUcWRUGkPprgrzu2MyYnTe8qPN+/fr1xlj8j09mef/SJ9jItzS84V/hzh15rZc3c8C59AC9UZ1jS54IP5xy3kn15Cn4FAOYmosTXeUx1DteG1TmC4YOHZrzHnVQ4kLCmTiTHZ/btpqPmO/LQ4YMkY0TIiZvT4b+8qGr2J9E2rmX339VGEAMk7yhISvws2tg+/fffz+2DRf79Okje995HzUNd25fA8hdXl5R897Va7lzF7JCPrs8Of7BgwfLwnDZ2qpLHBf1A10CMic8Lt+LN3vmkVOzGxfSJeKJg+D1ffjkvJlDWFm6ZcuWyTIgqaso+slOxq+Ce9GvM8rkHDdBGbftIk+2Q6Md/75LYJ4T0svW9PLRo9Cb2PDhw7dCZ/l40b20jZegU/KwrpjoqjCANOIPaAy/9Km1swYOHPgpn/CCgjL7EPqtvP8LY21BvS3DI7PszOGVdYw0Rm9goeeZ3q185Mmb9UXwkA8tecNN5pW3Wd4IsLts0KBBw7zhhZ7D4yh4pek1uLYiUk+yYW2bP8KfJPkRdbgQOnbkyJGyD6OEhRJpdwef02kvb9bW1p4bkLiYt5dkwfu98JfvjsiX+q5GzmXciH5C2J3QM83NzdKzvAuZbYaS8uasECCuIl1VGMBMzUkFZ7ydh540tke6YwRpQLvTgP4Cx5ytybmThm5d1KtXr2kYhJxxN3hNpxdQ9CSNGD96t9Lz9G4AIUa3Hv5hTnrFOav0uSj+0L9/f+/i7TA+XeK44A6Cx8+RpuAAAAc8SURBVG1dAlNywnic9LwKfU1RZmJ/vX79+jW0kXnQLVDbq3AYIOmZiZGcSdjDkPQyV4LPz4Fka9qE3/is6d27t2wnJY/kJCvYyXdH5Et95yPnEmSIkZWnA3nczelxFsw9pRmqxgAyIP03Kv0nPvX0aYzgKzTCtrufT3xgEA1ZNqZcToPye7f2R/S0GgMzEzF//vyN5L0Or9d9nEfhZzEa3/JG5DunHLtj/ORdW9niyJt8Fhez7BDjDe8859FcZh79tuffGYO9BP7yTmpn+ige8lwD9jLm6V0jGSV7WaThZiZbl8mKgkL1kfV7o8gku+C0vQpHncvYnDwmyzdgZJjCO3Ti++oX7UWWTwkP2KmLA4GqMYACFkZQGp3sySanXpLHhLvoDfq9o9slLWMm/bio5cPS0vPze69V9oWL1FAxOLLTsO+jDUbjx8hpwhAO6aKAz4l8vpK0NxIlyzb24JjjMPTy+c+ccG8AOsmjs+zW442SC1U+6h260WtHJgbUR6CT7ArixUImFYQ6kpb9kZvZagyX340hUd1pw/IkI1viJyo3qrC0pasqAyiVs+WWWx7McQXk576GkXhBLlroVxieBnp538N/KXQ9dCdhT/HIK0YmqMf4OheK7D/ox983DIPzZfL4jsuRYQyGcBGyRa+7OM6AZMeR/0MXGcf5FTo+3rNnT1mwG/S1Mtn2f/+FCxe+AL8ornXjxo0HkdC7fpIgIxs5nI8Ob0IPQNdBZ6HLePSQj9hczvnt+FfQa5Kvlg1vy5T1R1mncpqzcw5hZe3oPctY4HdtK0l7mQCG99vWoxLkV50BnDdv3lpmO0fRgML2PJOL9gQMz2TSyWagMm4mF61say6bY8pjjV/9L4P3nlwoss7OLz4wjDzHIE/GeILSSM/0a0TKd0Jkx5HvkV7GcU5AR1nrF7RT8BvED+aikU9ckj2aW9G+o7Tg4GsE4SLjgV/iKN80mYEus5AjBkK+f3Ei/v7E5TjCT6Cs0sPMeTslJ3EZBoDjVZThWNuqgaHcZGVYwbYqqZZfdQZQaktmO2lAg7lo5YKVoDjoj1wcg4R3scx4vJGt6iNtmR5Rhuy8vA9lLdggC3/yvUMvToxrIYuBJasvYTgOh2fHGGTOxgu+mcowkDLcTVnkSaLLK44xqup9m8iPdSvtTb4xIvsL+sVrWAQEYjWAPvJ8d9Lgoiq1XB9VcoMwON+gIe+OIey4KHMT5Q+5lwmL3WiM0hvKnzpPCvjUg4/0jm4gqe9gOOGhjjI9DQ2F1xBIJjVC04dFMvb1T3gMhJ9c8MXsoC2vvZ0HjxoMR9gX5YJ6sGHq+cX5tjm/hJmwKMYmk3TTgbI8Tpnkve86QoOGVIgq3NEeIxtWdLiopaXlE0iJ61sr66jr0Mk7ZIU62m/QE1JnPnSObAPAIy+/TsYFeiIrUSDftuQA+RSeP3K8B5LvEsiC5HsZr8p555R0VhwN+SUMoSxiljcwfoyeYY/GHTq+SLprqOhBNMCjFy1alPNeb0fCYo4YnbfhOwn+8i0EGXOS/d18l0Zk8Ze1XDPQS3p8oyhXrDs5w08ueHnLQcY+Z2fJDfLKTPTFlGFHyiIf3PEa89k07MfQV9rFw/hlEXYQr8jh8JE3JmThsnyyVCYLZP2nrG28S2R1EAxlMqGJMd+iesfkb3OUbQ60J3w/C8kyn5ytx9oShv/J4vO55L+UZHvQHm/mGNktX758FTqcumHDhm0pvyxjejFy5vaEcpOcSV0dAZ/NqeucGxUGSxbty4a/gpvgKbgKvp2E/lKXD4Bp3t2eGSqSGXUZNpGx704eqOP1y9tJIpeo+F1JDSBA3gGgX+J4DCRfpjqK86MZjC+mJxF/6bM4oter0HnoKTvv7kJlfgU6kwYlu/vKchQxSEcQtjvp+pPuAgyVNIosLvF64f8Bsq6ChjPxIh+sOQz5MtFxjuiFXz5gczQ90D1JswM0Gb1k4iFeRbK4IUO+NfEFZG/DBXMIepwBfQsSnGTM9EjCP0W6YdAVlCFn1xlhR9zFXOjj0Ffaxefxywy9RHWLkPcXeB8KnQRNgE6GToSOF1kdJOfQWG5eseycDN950CnwlHV8MnZ6GhjJ7s8yVvsD8BHDJI+rMsQhNzWpw+NJsw94bUe+MeS/jKPf7HskTOR7I+B4ITz6w1eebOSNjvORfRl0tRDhl3OUdYDfQu4xmbazC3nkOx6BEyvgej9pDoCOhwRPwVXw7ST0l7r8HzDN2yOWb+gIH/Icw7GTh49/LGF5PzYVCSCfRCU1gD7yUhEE4K9SMb+HfkaDug66lrAbpBEQ5t9jKHHJnn/++TXI/hN0E7r8FJ2uw9/A8d4oDS5u9ZD9Dng0Iv/n0LWQ4DSD8PsID5o4iVuNcuTXChYLqaOZYPEDjvWcXyiE/yKoHpKbmtThXaSZD14yTBBrWeArTza3IeuHyL4U+o4Q4ZdwvBy6Frn32Gg7sRa0m8z+HwAA//9yO7pHAAAABklEQVQDAFjzyl/FmPILAAAAAElFTkSuQmCC" alt="FoodTech Logo" class="logo-img">
+      </div>
+
+      <div class="header-text">
+        <h1>PROPOSTA COMERCIAL &amp; TÉCNICA</h1>
+        <p>Sistema PAC Digital — Gestão Integrada de Autocontrole e Conformidade Regulatória</p>
+      </div>
+    </div>
+
+    <div class="company-header-info">
+      <div><strong>Razão Social:</strong> FoodTech Consultoria em Qualidade e Segurança Alimentar</div>
+      <div><strong>CNPJ:</strong> 46.390.469/0001-85</div>
+      <div><strong>Endereço:</strong> Rua Dourados, 324, Bataguassu – MS</div>
+      <div><strong>Contato:</strong> (18) 99650-7371 | contato@foodtech.net.br</div>
+    </div>
+  </header>
+
+  <!-- DADOS EDITÁVEIS DO CLIENTE -->
+  
+
+  <div class="content-padding">
+    <div class="intro-card">
+      <strong>Apresentação da Solução:</strong><br>
+      A <strong>FoodTech Consultoria em Qualidade e Segurança Alimentar</strong> apresenta o <strong>PAC Digital</strong>, uma plataforma especialista desenvolvida para transformar e automatizar a gestão dos Programas de Autocontrole (PAC/BPF/APPCC/PPHO) em indústrias reguladas (MAPA/ANVISA). O sistema elimina o uso de formulários físicos em papel, otimiza rotinas de monitoramento em tempo real e garante prontidão em auditorias com inteligência artificial e assessoria jurídica/legal especializada.
+    </div>
+
+    <h2>1. Funcionalidades Nativas (Inclusas em Todos os Pacotes)</h2>
+    <p style="margin-bottom: 15px; font-size: 0.9rem; color: var(--text-muted);">
+      Todos os pacotes garantem acesso completo à plataforma PAC Digital e às seguintes funcionalidades:
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon">✓</div>
+        <div class="feature-text">
+          <strong>Cadastro de Estabelecimento, Ingredientes e Produtos</strong>
+          <p>Gestão completa de unidades industriais, linhas de produção, ingredientes, matérias-primas e fichas técnicas.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">✓</div>
+        <div class="feature-text">
+          <strong>IA para Verificação de Rótulos e Documentos</strong>
+          <p>Inteligência Artificial avançada para verificação e validação de rótulos, laudos e documentos normativos.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">✓</div>
+        <div class="feature-text">
+          <strong>Gestão Documental do PAC com Aprovação</strong>
+          <p>Cadastro, versionamento e fluxo formal de aprovação digital de documentos relativos ao PAC.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">✓</div>
+        <div class="feature-text">
+          <strong>Planos de Monitoramento &amp; Planos de Ação</strong>
+          <p>Cadastro de itens avaliados, frequências de monitoramento, limites críticos e geração automática de Planos de Ação.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">📸</div>
+        <div class="feature-text">
+          <strong>Inclusão de Fotos e Anexos Comprobatórios</strong>
+          <p>Possibilidade de inclusão de fotos e anexos comprobatórios nos monitoramentos para evidência auditável.</p>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-icon">📱</div>
+        <div class="feature-text">
+          <strong>Acesso por Dispositivos Móveis</strong>
+          <p>Acesso prático via smartphones e tablets para execução rápida de rotinas no chão de fábrica.</p>
+        </div>
+      </div>
+
+      <div class="feature-item" style="grid-column: 1 / -1;">
+        <div class="feature-icon">⚖️</div>
+        <div class="feature-text">
+          <strong>Suporte Técnico e Jurídico/Legal Especializado</strong>
+          <p>Atendimento duplo: suporte técnico ao sistema e consultoria jurídica/legal especializada em regulação sanitária.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>2. Planos e Opções de Investimento</h2>
+    <div class="pricing-grid">
+      
+      <!-- Plano Básico -->
+      <div class="pricing-card" id="card-basico">
+        <div class="plan-name">Básico</div>
+        <div class="plan-price">R$ 300 <span>/mês</span></div>
+        <div class="plan-setup">Sem taxa de implantação</div>
+        <ul class="plan-features-list">
+          <li><strong>3 Usuários</strong> inclusos</li>
+          <li><strong>3.000 Monitoramentos</strong> por mês</li>
+          <li>Acesso a todas as funcionalidades do sistema</li>
+          <li>Módulo de IA para Rótulos e Documentos</li>
+          <li>Possibilidade de inclusão de fotos e anexos</li>
+          <li>Acesso por dispositivos móveis</li>
+          <li><strong>Suporte Técnico:</strong> Chamados por texto em até <strong>48h</strong></li>
+          <li>Suporte jurídico/legal básico incluso</li>
+        </ul>
+        <button type="button" class="btn-select-plan" onclick="choosePlan(&#39;basico&#39;)">Selecionar Plano Básico</button>
+      </div>
+
+      <!-- Plano Intermediário -->
+      <div class="pricing-card popular" id="card-intermediario">
+        <div class="popular-badge">Mais Recomendado</div>
+        <div class="plan-name">Intermediário</div>
+        <div class="plan-price">R$ 500 <span>/mês</span></div>
+        <div class="plan-setup" style="color: var(--success);">PAC Padrão Incluso (Pronto para Uso)</div>
+        <ul class="plan-features-list">
+          <li>Até <strong>10 Usuários</strong> simultâneos</li>
+          <li><strong>10.000 Monitoramentos</strong> por mês</li>
+          <li><strong>PAC Padrão Pré-carregado:</strong> Dados do setor pré-configurados (itens avaliados, frequências, planos de ação)</li>
+          <li>Módulo de IA para Rótulos e Documentos</li>
+          <li>Inclusão de fotos e anexos nos monitoramentos</li>
+          <li><strong>Suporte Prioritário:</strong> Chat Online ao vivo + Chamados em até <strong>24h</strong></li>
+          <li>Suporte jurídico/legal especializado</li>
+        </ul>
+        <button type="button" class="btn-select-plan" onclick="choosePlan(&#39;intermediario&#39;)">Selecionar Plano Intermediário</button>
+      </div>
+
+      <!-- Plano Avançado -->
+      <div class="pricing-card" id="card-avancado">
+        <div class="plan-name">Avançado</div>
+        <div class="plan-price">R$ 1.500 <span>/mês</span></div>
+        <div class="plan-setup">+ R$ 3.500,00 Implantação (taxa única)</div>
+        <ul class="plan-features-list">
+          <li><strong>Usuários Ilimitados</strong></li>
+          <li><strong>Monitoramentos Ilimitados</strong></li>
+          <li><strong>PAC Padrão Pré-carregado</strong> pronto para uso</li>
+          <li><strong>50h de Consultoria de Implantação:</strong> Para ajustes no PAC próprio ou no PAC padrão</li>
+          <li><strong>10h/mês de Consultoria Especializada Exclusiva:</strong> Para alterações no PAC, apoio em fiscalizações, defesa de autos e recursos</li>
+          <li><strong>Suporte VIP:</strong> Telefone comercial + Chat Online + Chamados em até <strong>24h</strong></li>
+          <li>Suporte jurídico/legal especializado</li>
+        </ul>
+        <button type="button" class="btn-select-plan" onclick="choosePlan(&#39;avancado&#39;)">Selecionar Plano Avançado</button>
+      </div>
+
+    </div>
+
+    <h2>3. Matriz Comparativa de Recursos</h2>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Recurso / Funcionalidade</th>
+            <th style="text-align: center;">Básico</th>
+            <th style="text-align: center;">Intermediário</th>
+            <th style="text-align: center;">Avançado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Limite de Usuários</strong></td>
+            <td style="text-align: center;">3 Usuários</td>
+            <td style="text-align: center;">Até 10 Usuários</td>
+            <td style="text-align: center; font-weight: bold; color: var(--success);">Ilimitados</td>
+          </tr>
+          <tr>
+            <td><strong>Volume de Monitoramentos / mês</strong></td>
+            <td style="text-align: center;">3.000 / mês</td>
+            <td style="text-align: center;">10.000 / mês</td>
+            <td style="text-align: center; font-weight: bold; color: var(--success);">Ilimitados</td>
+          </tr>
+          <tr>
+            <td><strong>Fotos e Anexos nos Monitoramentos</strong></td>
+            <td style="text-align: center;" class="check-icon">✓</td>
+            <td style="text-align: center;" class="check-icon">✓</td>
+            <td style="text-align: center;" class="check-icon">✓</td>
+          </tr>
+          <tr>
+            <td><strong>PAC Padrão do Setor (Sistema Pronto para Usar)</strong></td>
+            <td style="text-align: center; color: var(--text-muted);">—</td>
+            <td style="text-align: center;" class="check-icon">✓</td>
+            <td style="text-align: center;" class="check-icon">✓</td>
+          </tr>
+          <tr>
+            <td><strong>Consultoria de Implantação Personalizada</strong></td>
+            <td style="text-align: center; color: var(--text-muted);">—</td>
+            <td style="text-align: center; color: var(--text-muted);">—</td>
+            <td style="text-align: center; font-weight: bold;">50 Horas (no Setup)</td>
+          </tr>
+          <tr>
+            <td><strong>Consultoria Jurídica / Regulatória Mensal</strong></td>
+            <td style="text-align: center;">Suporte Básico</td>
+            <td style="text-align: center; font-weight: bold;">Suporte Especializado</td>
+            <td style="text-align: center; font-weight: bold; color: var(--success);">Suporte Especializado + 10h/mês Exclusivas</td>
+          </tr>
+          <tr>
+            <td><strong>Canais de Atendimento e SLA</strong></td>
+            <td style="text-align: center;">Chamados (48h)</td>
+            <td style="text-align: center;">Chat + Chamados (24h)</td>
+            <td style="text-align: center; font-weight: bold;">Telefone + Chat + Chamados (24h)</td>
+          </tr>
+          <tr>
+            <td><strong>Investimento de Implantação (Setup)</strong></td>
+            <td style="text-align: center;">Isento</td>
+            <td style="text-align: center;">Isento</td>
+            <td style="text-align: center; font-weight: bold;">R$ 3.500,00</td>
+          </tr>
+          <tr>
+            <td><strong>Mensalidade Recorrente</strong></td>
+            <td style="text-align: center; font-weight: bold;">R$ 300,00</td>
+            <td style="text-align: center; font-weight: bold; color: var(--accent);">R$ 500,00</td>
+            <td style="text-align: center; font-weight: bold; color: var(--primary);">R$ 1.500,00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>4. Diferenciais Estratégicos &amp; Serviços Agregados</h2>
+    
+    <div class="detail-card">
+      <h3>⚡ PAC Padrão: Sistema Pronto para Ser Usado</h3>
+      <p style="font-size: 0.9rem; color: var(--text-dark);">
+        Disponível nos pacotes Intermediário e Avançado, o <strong>PAC Padrão</strong> entrega o sistema "recheado" com um conjunto de dados pré-cadastrados (itens avaliados, frequências de monitoramento, planos de ação) exatamente como cobrado pela fiscalização para o seu tipo de indústria. Isso deixa o <strong>Sistema PAC Digital pronto para ser usado imediatamente</strong>, eliminando dores de cabeça no cadastro inicial.
+      </p>
+    </div>
+
+    <div class="detail-card">
+      <h3>⚖️ Suporte Jurídico/Legal Especializado &amp; Horas Exclusivas</h3>
+      <p style="font-size: 0.9rem; color: var(--text-dark);">
+        Todos os planos contam com suporte jurídico/legal. Nos planos Intermediário e Avançado, este suporte é <strong>Especializado</strong> em regulação sanitária (MAPA/ANVISA). Adicionalmente, o <strong>Pacote Avançado inclui 10 horas mensais exclusivas de consultoria especializada</strong>, que podem ser utilizadas para eventuais necessidades de alterações no PAC, apoio em fiscalizações, defesa de autos de infração e recursos administrativos.
+      </p>
+    </div>
+
+    <h2>5. Condições Comerciais &amp; Informações Complementares</h2>
+    <div class="detail-card">
+      <ul class="info-list">
+        <li><strong>Política de Excedentes (Planos Básico e Intermediário):</strong>
+          <ul>
+            <li><strong>Usuários Adicionais:</strong> R$ 50,00 / mês por usuário adicional.</li>
+            <li><strong>Excesso de Monitoramentos:</strong> R$ 50,00 / mês a cada 1.000 monitoramentos adicionais no mês.</li>
+          </ul>
+        </li>
+        <li><strong>Sem Fidelidade Contratual:</strong>
+          <ul>
+            <li>Não há fidelidade contratual. O usuário pode interromper o pagamento e cancelar sua assinatura a qualquer momento, sem multas, prazos de carência ou penalidades.</li>
+          </ul>
+        </li>
+        <li><strong>Consultoria de Implantação e Horas Mensais (Pacote Avançado):</strong>
+          <ul>
+            <li>As <strong>50 horas de implantação</strong> podem ser utilizadas para adaptação do PAC próprio da empresa ou ajustes no PAC padrão fornecido.</li>
+            <li>As <strong>10 horas mensais exclusivas</strong> cobrem necessidades contínuas de alterações no PAC, suporte em fiscalizações e defesas administrativas.</li>
+          </ul>
+        </li>
+        <li><strong>Faturamento e Reajuste:</strong> Cobrança mensal via boleto bancário ou PIX. Reajuste anual pelo índice IPCA/IBGE.</li>
+        <li><strong>Segurança e LGPD:</strong> Armazenamento em nuvem de alta segurança, backup diário automatizado e conformidade integral com a LGPD (Lei Nº 13.709/2018).</li>
+      </ul>
+    </div>
+
+    <!-- SEÇÃO DE ACEITE COM SELEÇÃO EXPLÍCITA DO PLANO -->
+    
+
+  </div>
+
+  <footer>
+    <strong>FoodTech Consultoria em Qualidade e Segurança Alimentar</strong> | CNPJ 46.390.469/0001-85<br>
+    Rua Dourados, 324, Bataguassu – MS | (18) 99650-7371 | contato@foodtech.net.br
+  </footer>
+</div>
+
+<script>
+  function updateSelectedPlan(planKey) {
+    const labels = document.querySelectorAll('.plan-option-label');
+    labels.forEach(lbl => lbl.classList.remove('selected'));
+    
+    const targetLabel = document.getElementById('label-' + planKey);
+    if(targetLabel) targetLabel.classList.add('selected');
+
+    const radio = document.querySelector(`input[name="plano_opcao"][value="${planKey}"]`);
+    if(radio) radio.checked = true;
+  }
+
+  function choosePlan(planKey) {
+    updateSelectedPlan(planKey);
+    const formalizacao = document.getElementById('formalizacao');
+    if(formalizacao) {
+      formalizacao.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script>
+
+
+
+</body></html>
