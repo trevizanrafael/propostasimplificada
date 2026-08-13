@@ -3,498 +3,379 @@
 <html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proposta Comercial - PAC Digital - FoodTech</title>
+  <title>Proposta Comercial e Técnica | PAC Digital | FoodTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    /* FoodTech IDV — alinhada ao sistema */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
-      --primary: #1e3a8a;
-      --primary-dark: #0f172a;
-      --accent: #2563eb;
-      --accent-light: #eff6ff;
-      --success: #16a34a;
-      --warning: #d97706;
-      --text-dark: #1e293b;
-      --text-muted: #64748b;
-      --border-color: #cbd5e1;
-      --bg-light: #f8fafc;
+      --azul: #0A73C9;
+      --grafite: #222222;
+      --fundo: #F4F5F7;
+      --branco: #FFFFFF;
+      --borda: #D1D5DB;
+      --borda2: #E5E7EB;
+      --txt: #222222;
+      --txt2: #4B5563;
+      --txt3: #9CA3AF;
+      --hover: #DCEEFF;
+      --verde: #16A34A;
+      --amarelo: #F59E0B;
+      --vermelho: #DC2626;
+      --primary: var(--azul);
+      --primary-dark: var(--grafite);
+      --accent: var(--azul);
+      --accent-light: var(--hover);
+      --success: var(--verde);
+      --warning: var(--amarelo);
+      --text-dark: var(--txt);
+      --text-muted: var(--txt2);
+      --border-color: var(--borda2);
+      --bg-light: var(--fundo);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: var(--text-dark);
-      background-color: #f1f5f9;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--fundo);
+      color: var(--txt);
+      font-size: 13px;
       line-height: 1.5;
-      padding: 20px;
+      padding: 24px;
     }
 
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-track { background: var(--fundo); }
+    ::-webkit-scrollbar-thumb { background: #CBD5E0; }
+
     .container {
-      max-width: 1000px;
+      max-width: 1080px;
       margin: 0 auto;
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: 6px;
       overflow: hidden;
     }
 
-    /* Header with Logo */
     header {
-      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-      color: #ffffff;
-      padding: 25px 30px;
+      background: var(--grafite);
+      color: var(--branco);
+      padding: 0;
     }
 
     .header-layout {
+      min-height: 82px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
+      gap: 18px;
+      padding: 18px 28px;
+      border-bottom: 1px solid rgba(255,255,255,.10);
     }
 
     .logo-container {
-      background: #ffffff;
-      padding: 10px 18px;
-      border-radius: 8px;
       display: flex;
       align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    .logo-img {
-      max-height: 60px;
-      width: auto;
-      display: block;
-    }
-
-    .header-text {
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .header-text h1 {
-      font-size: 1.7rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      margin-bottom: 4px;
-      color: #ffffff;
-    }
-
-    .header-text p {
-      color: #cbd5e1;
-      font-size: 0.95rem;
-      font-weight: 300;
-    }
-
-    .company-header-info {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      padding: 10px 15px;
-      margin-top: 15px;
-      font-size: 0.82rem;
-      color: #e2e8f0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 8px;
-    }
-
-    .meta-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      background: var(--bg-light);
-      padding: 20px 30px;
-      border-bottom: 1px solid var(--border-color);
-      font-size: 0.9rem;
-    }
-
-    .meta-item label {
-      display: block;
-      color: var(--primary-dark);
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 4px;
-    }
-
-    .editable-input {
-      width: 100%;
-      padding: 7px 10px;
-      border: 1px solid #94a3b8;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      color: #0f172a;
-      background-color: #ffffff;
-      font-family: inherit;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .editable-input:focus {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
-    }
-
-    .content-padding {
-      padding: 30px;
-    }
-
-    .intro-card {
-      background: var(--accent-light);
-      border-left: 4px solid var(--accent);
-      padding: 18px;
-      border-radius: 0 8px 8px 0;
-      margin-bottom: 30px;
-      font-size: 0.95rem;
-      color: #1e3a8a;
-    }
-
-    h2 {
-      font-size: 1.2rem;
-      color: var(--primary-dark);
-      margin-top: 30px;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.3px;
-    }
-
-    h2::before {
-      content: "";
-      display: inline-block;
-      width: 4px;
-      height: 18px;
-      background-color: var(--accent);
-      border-radius: 2px;
-    }
-
-    /* Features Grid */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 14px;
-      margin-bottom: 25px;
-    }
-
-    .feature-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      background: #ffffff;
-      border: 1px solid var(--border-color);
-      padding: 12px 14px;
-      border-radius: 8px;
-    }
-
-    .feature-icon {
-      background: var(--accent-light);
-      color: var(--accent);
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 0.85rem;
+      justify-content: flex-start;
+      padding-right: 18px;
+      border-right: 1px solid rgba(255,255,255,.10);
       flex-shrink: 0;
     }
 
+    .logo-img {
+      max-height: 42px;
+      max-width: 180px;
+      width: auto;
+      display: block;
+      filter: brightness(0) invert(1);
+    }
+
+    .header-text { flex: 1; min-width: 260px; }
+
+    .header-text h1 {
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 700;
+      letter-spacing: -.2px;
+      color: var(--branco);
+      margin-bottom: 5px;
+    }
+
+    .header-text p {
+      color: rgba(255,255,255,.58);
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    .company-header-info {
+      display: grid;
+      grid-template-columns: 1.3fr .75fr 1.5fr 1.15fr;
+      gap: 0;
+      background: #2A2A2A;
+      margin: 0;
+      padding: 0 28px;
+      font-size: 10.5px;
+      color: rgba(255,255,255,.55);
+    }
+
+    .company-header-info > div {
+      padding: 10px 14px 10px 0;
+      margin-right: 14px;
+      border-right: 1px solid rgba(255,255,255,.08);
+      line-height: 1.45;
+    }
+    .company-header-info > div:last-child { border-right: none; margin-right: 0; }
+    .company-header-info strong { color: rgba(255,255,255,.82); font-weight: 600; }
+
+    .content-padding { padding: 34px 42px 42px; }
+
+    .intro-card {
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-left: 3px solid var(--azul);
+      padding: 16px 18px;
+      border-radius: 4px;
+      margin-bottom: 30px;
+      font-size: 12px;
+      color: var(--txt2);
+      line-height: 1.7;
+    }
+    .intro-card > strong:first-child {
+      display: inline-block;
+      color: var(--grafite);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+    .intro-card strong { color: var(--grafite); font-weight: 600; }
+
+    h2 {
+      font-size: 11px;
+      color: var(--txt3);
+      margin-top: 34px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      text-transform: uppercase;
+      letter-spacing: .9px;
+      font-weight: 700;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--borda2);
+    }
+    h2::before {
+      content: '';
+      width: 4px;
+      height: 14px;
+      background: var(--azul);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--borda2);
+      border: 1px solid var(--borda2);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: var(--branco);
+      padding: 14px 16px;
+      border: none;
+      border-radius: 0;
+    }
+    .feature-icon {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      background: var(--hover);
+      border: 1px solid rgba(10,115,201,.18);
+      color: var(--azul);
+      font-size: 10px;
+      font-weight: 700;
+      margin-top: 1px;
+    }
     .feature-text strong {
       display: block;
-      color: var(--primary-dark);
-      margin-bottom: 2px;
-      font-size: 0.92rem;
+      color: var(--grafite);
+      margin-bottom: 3px;
+      font-size: 12px;
+      font-weight: 600;
     }
+    .feature-text p { font-size: 11px; color: var(--txt2); line-height: 1.55; }
 
-    .feature-text p {
-      font-size: 0.83rem;
-      color: var(--text-muted);
-      line-height: 1.35;
-    }
-
-    /* Pricing Cards */
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 20px;
-      margin-bottom: 35px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 34px;
+      align-items: stretch;
     }
-
     .pricing-card {
-      background: #ffffff;
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 22px;
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: 6px;
+      padding: 18px;
       display: flex;
       flex-direction: column;
       position: relative;
-      transition: border-color 0.2s, box-shadow 0.2s;
+      box-shadow: none;
+      transition: border-color .15s, background .15s;
     }
-
+    .pricing-card:hover { border-color: #AEB8C3; }
     .pricing-card.popular {
-      border: 2px solid var(--accent);
-      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.1);
-      background: #fdfefe;
+      border: 1px solid var(--azul);
+      box-shadow: inset 0 3px 0 var(--azul);
+      background: var(--branco);
     }
-
     .popular-badge {
-      position: absolute;
-      top: -11px;
-      right: 18px;
-      background: var(--accent);
-      color: #ffffff;
-      font-size: 0.7rem;
+      position: static;
+      align-self: flex-start;
+      background: var(--hover);
+      border: 1px solid rgba(10,115,201,.18);
+      color: var(--azul);
+      font-size: 9px;
       font-weight: 700;
       text-transform: uppercase;
-      padding: 3px 10px;
-      border-radius: 15px;
-      letter-spacing: 0.5px;
+      padding: 3px 7px;
+      border-radius: 3px;
+      letter-spacing: .6px;
+      margin-bottom: 10px;
     }
-
-    .plan-name {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--primary-dark);
-      margin-bottom: 6px;
-    }
-
-    .plan-price {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 2px;
-    }
-
-    .plan-price span {
-      font-size: 0.85rem;
-      font-weight: 400;
-      color: var(--text-muted);
-    }
-
-    .plan-setup {
-      font-size: 0.82rem;
-      color: var(--warning);
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-
-    .plan-features-list {
-      list-style: none;
-      margin-top: 12px;
-      margin-bottom: 20px;
-      flex-grow: 1;
-    }
-
-    .plan-features-list li {
-      position: relative;
-      padding-left: 20px;
-      margin-bottom: 8px;
-      font-size: 0.85rem;
-      color: var(--text-dark);
-    }
-
-    .plan-features-list li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--success);
-      font-weight: bold;
-    }
+    .plan-name { font-size: 15px; font-weight: 700; color: var(--grafite); margin-bottom: 5px; }
+    .plan-price { font-size: 24px; line-height: 1.1; font-weight: 700; color: var(--grafite); margin-bottom: 5px; letter-spacing: -.4px; }
+    .plan-price span { font-size: 11px; font-weight: 400; color: var(--txt3); }
+    .plan-setup { font-size: 10px; color: var(--amarelo); font-weight: 600; margin-bottom: 11px; min-height: 30px; }
+    .plan-features-list { list-style: none; margin: 8px 0 18px; flex-grow: 1; border-top: 1px solid var(--borda2); padding-top: 12px; }
+    .plan-features-list li { position: relative; padding-left: 18px; margin-bottom: 8px; font-size: 11px; line-height: 1.45; color: var(--txt2); }
+    .plan-features-list li::before { content: ''; width:6px; height:6px; background:var(--azul); border-radius:2px; top:7px;
+      width: 15px; height: 15px; display: inline-flex; align-items: center; justify-content: center;
+      background: var(--hover); border: 1px solid rgba(10,115,201,.28); border-radius: 3px;
+      font-size: 10px; line-height: 1; position: absolute; left: 0; top: 0; color: var(--azul); font-weight: 700; }
+    .plan-features-list strong { color: var(--grafite); font-weight: 600; }
 
     .btn-select-plan {
-      display: block;
       width: 100%;
-      padding: 10px;
+      padding: 8px 10px;
       text-align: center;
-      background-color: var(--bg-light);
-      color: var(--primary-dark);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
+      background: var(--branco);
+      color: var(--azul);
+      border: 1px solid var(--azul);
+      border-radius: 4px;
+      font-family: inherit;
       font-weight: 600;
-      font-size: 0.88rem;
+      font-size: 11px;
       cursor: pointer;
-      transition: all 0.2s ease;
-      text-decoration: none;
+      transition: background .15s, color .15s;
     }
+    .btn-select-plan:hover, .pricing-card.popular .btn-select-plan { background: var(--azul); color: #fff; }
+    .pricing-card.popular .btn-select-plan:hover { background: #0864AF; }
 
-    .btn-select-plan:hover {
-      background-color: var(--accent-light);
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    .pricing-card.popular .btn-select-plan {
-      background-color: var(--accent);
-      color: #ffffff;
-      border: none;
-    }
-
-    .pricing-card.popular .btn-select-plan:hover {
-      background-color: #1d4ed8;
-    }
-
-    .plan-selector-box {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-
-    .plan-option-label {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 15px;
-      background: #ffffff;
-      border: 2px solid var(--border-color);
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--text-dark);
-      transition: all 0.2s ease;
-    }
-
-    .plan-option-label:hover {
-      border-color: var(--accent);
-      background: var(--accent-light);
-    }
-
-    .plan-option-label input[type="radio"] {
-      width: 18px;
-      height: 18px;
-      accent-color: var(--accent);
-      cursor: pointer;
-    }
-
-    .plan-option-label.selected {
-      border-color: var(--accent);
-      background: var(--accent-light);
-      color: var(--primary);
-    }
-
-    /* Comparison Table */
     .table-container {
       overflow-x: auto;
-      margin-bottom: 35px;
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
+      margin-bottom: 34px;
+      border: 1px solid var(--borda);
+      border-radius: 6px;
     }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-      font-size: 0.85rem;
-    }
-
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: 11px; }
     th {
-      background: var(--primary-dark);
-      color: #ffffff;
-      padding: 12px 14px;
-      font-weight: 600;
+      background: var(--fundo);
+      color: var(--txt3);
+      padding: 9px 11px;
+      font-weight: 700;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      border-bottom: 1px solid var(--borda);
     }
-
-    td {
-      padding: 10px 14px;
-      border-bottom: 1px solid var(--border-color);
-      color: var(--text-dark);
-    }
-
-    tr:nth-child(even) td {
-      background-color: var(--bg-light);
-    }
-
-    .check-icon {
-      color: var(--success);
-      font-weight: bold;
-    }
+    td { padding: 10px 11px; border-bottom: 1px solid var(--borda2); color: var(--txt2); vertical-align: top; }
+    tbody tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) td { background: #FAFAFA; }
+    .check-icon { color: var(--azul); font-weight: 700; font-size: 0; }
+    .check-icon::before { content: "INCLUSO"; display:inline-flex; align-items:center; justify-content:center; background:var(--hover); border:1px solid rgba(10,115,201,.22); color:var(--azul); border-radius:4px; padding:3px 7px; font-size:9px; font-weight:700; letter-spacing:.45px; line-height:1; }
 
     .detail-card {
-      background: #ffffff;
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 18px;
-      margin-bottom: 18px;
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: 6px;
+      padding: 16px 18px;
+      margin-bottom: 10px;
     }
-
     .detail-card h3 {
-      font-size: 1.02rem;
-      color: var(--primary);
-      margin-bottom: 8px;
+      font-size: 12px;
+      color: var(--grafite);
+      font-weight: 700;
+      margin-bottom: 7px;
     }
+    .detail-card p { font-size: 11px !important; color: var(--txt2) !important; line-height: 1.6; }
+    .info-list { padding-left: 17px; margin-top: 2px; font-size: 11px; color: var(--txt2); }
+    .info-list li { margin-bottom: 8px; line-height: 1.55; }
+    .info-list ul { margin: 5px 0 0 15px; }
+    .info-list strong { color: var(--grafite); font-weight: 600; }
 
-    .info-list {
-      padding-left: 18px;
-      margin-top: 8px;
-      font-size: 0.88rem;
-    }
-
-    .info-list li {
-      margin-bottom: 8px;
-    }
-
-    .acceptance-box {
-      background: var(--bg-light);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 22px;
-      margin-top: 35px;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      margin-bottom: 15px;
-    }
-
-    .signature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-top: 25px;
-    }
-
-    .signature-card {
-      background: #ffffff;
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 15px;
-      text-align: center;
-    }
-
-    .signature-line-box {
-      border-top: 1px solid #94a3b8;
-      margin-top: 40px;
-      padding-top: 8px;
-      font-size: 0.82rem;
-      color: var(--text-muted);
-    }
+    .acceptance-box { background: var(--fundo); border: 1px solid var(--borda); border-radius: 6px; padding: 20px; margin-top: 32px; }
+    .form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-bottom: 12px; }
+    .signature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 24px; }
+    .signature-card { background: var(--branco); border: 1px solid var(--borda); border-radius: 6px; padding: 14px; text-align: center; }
+    .signature-line-box { border-top: 1px solid #9CA3AF; margin-top: 38px; padding-top: 7px; font-size: 10px; color: var(--txt3); }
+    .editable-input { width: 100%; padding: 7px 9px; border: 1px solid var(--borda); border-radius: 4px; font-size: 11px; color: var(--txt); background: var(--branco); font-family: inherit; }
+    .editable-input:focus { outline: none; border-color: var(--azul); box-shadow: 0 0 0 2px rgba(10,115,201,.10); }
 
     footer {
-      text-align: center;
-      padding: 18px;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      border-top: 1px solid var(--border-color);
-      background: var(--bg-light);
+      background: var(--grafite);
+      color: rgba(255,255,255,.42);
+      text-align: left;
+      padding: 16px 28px;
+      font-size: 10px;
+      line-height: 1.7;
+      border-top: none;
+    }
+    footer strong { color: rgba(255,255,255,.84); font-weight: 600; }
+
+    @media (max-width: 860px) {
+      body { padding: 0; }
+      .container { border-radius: 0; border-left: none; border-right: none; }
+      .header-layout { padding: 16px 20px; }
+      .company-header-info { grid-template-columns: 1fr 1fr; padding: 0 20px; }
+      .content-padding { padding: 28px 20px 34px; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .features-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .header-layout { align-items: flex-start; flex-direction: column; }
+      .logo-container { border-right: 0; padding-right: 0; }
+      .header-text h1 { font-size: 18px; }
+      .company-header-info { grid-template-columns: 1fr; }
+      .company-header-info > div { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.08); margin-right: 0; }
+      .company-header-info > div:last-child { border-bottom: 0; }
     }
 
     @media print {
-      body { padding: 0; background: #ffffff; }
-      .container { box-shadow: none; border-radius: 0; }
-      .editable-input { border: none; border-bottom: 1px solid #000; border-radius: 0; padding: 2px 0; background: transparent; }
+      @page { size: A4; margin: 10mm; }
+      body { padding: 0; background: #fff; font-size: 10px; }
+      .container { max-width: none; border: none; border-radius: 0; }
+      header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .content-padding { padding: 22px 24px; }
+      .pricing-grid { gap: 8px; }
+      .pricing-card, .detail-card, .feature-item { break-inside: avoid; }
       .btn-select-plan { display: none; }
+      .editable-input { border: none; border-bottom: 1px solid #000; border-radius: 0; padding: 2px 0; background: transparent; }
     }
   </style>
 </head>
@@ -515,10 +396,10 @@
     </div>
 
     <div class="company-header-info">
-      <div><strong>Razão Social:</strong> FoodTech Consultoria em Qualidade e Segurança Alimentar</div>
-      <div><strong>CNPJ:</strong> 46.390.469/0001-85</div>
-      <div><strong>Endereço:</strong> Rua Dourados, 324, Bataguassu – MS</div>
-      <div><strong>Contato:</strong> (18) 99650-7371 | contato@foodtech.net.br</div>
+      <div><strong>Razão Social:</strong> FOODTECH CONSULTORIA, INSPECAO SANITARIA E SOLUCOES DIGITAIS LTDA</div>
+      <div><strong>CNPJ:</strong> 62.777.166/0001-76</div>
+      <div><strong>Endereço:</strong> Rua Princesa Isabel, 1094, Centro, Dracena – SP, CEP 17.900-159</div>
+      <div><strong>Contato:</strong> (18) 9650-7371 | SGQBRASIL@GMAIL.COM</div>
     </div>
   </header>
 
@@ -528,17 +409,17 @@
   <div class="content-padding">
     <div class="intro-card">
       <strong>Apresentação da Solução:</strong><br>
-      A <strong>FoodTech Consultoria em Qualidade e Segurança Alimentar</strong> apresenta o <strong>PAC Digital</strong>, uma plataforma especialista desenvolvida para transformar e automatizar a gestão dos Programas de Autocontrole (PAC/BPF/APPCC/PPHO) em indústrias reguladas (MAPA/ANVISA). O sistema elimina o uso de formulários físicos em papel, otimiza rotinas de monitoramento em tempo real e garante prontidão em auditorias com inteligência artificial e assessoria jurídica/legal especializada.
+      A <strong>FoodTech</strong> apresenta o <strong>PAC Digital</strong>, uma plataforma especialista desenvolvida para transformar e automatizar a gestão dos Programas de Autocontrole (PAC/BPF/APPCC/PPHO) em indústrias reguladas (MAPA/ANVISA). O sistema elimina o uso de formulários físicos em papel, otimiza rotinas de monitoramento em tempo real e garante prontidão em auditorias com inteligência artificial e assessoria jurídica/legal especializada.
     </div>
 
     <h2>1. Funcionalidades Nativas (Inclusas em Todos os Pacotes)</h2>
-    <p style="margin-bottom: 15px; font-size: 0.9rem; color: var(--text-muted);">
+    <p style="margin-bottom: 15px; font-size: 11px; color: var(--txt2);">
       Todos os pacotes garantem acesso completo à plataforma PAC Digital e às seguintes funcionalidades:
     </p>
 
     <div class="features-grid">
       <div class="feature-item">
-        <div class="feature-icon">✓</div>
+        <div class="feature-icon"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.2l3 3L13 4.8"/></svg></div>
         <div class="feature-text">
           <strong>Cadastro de Estabelecimento, Ingredientes e Produtos</strong>
           <p>Gestão completa de unidades industriais, linhas de produção, ingredientes, matérias-primas e fichas técnicas.</p>
@@ -546,7 +427,7 @@
       </div>
 
       <div class="feature-item">
-        <div class="feature-icon">✓</div>
+        <div class="feature-icon"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.2l3 3L13 4.8"/></svg></div>
         <div class="feature-text">
           <strong>IA para Verificação de Rótulos e Documentos</strong>
           <p>Inteligência Artificial avançada para verificação e validação de rótulos, laudos e documentos normativos.</p>
@@ -554,7 +435,7 @@
       </div>
 
       <div class="feature-item">
-        <div class="feature-icon">✓</div>
+        <div class="feature-icon"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.2l3 3L13 4.8"/></svg></div>
         <div class="feature-text">
           <strong>Gestão Documental do PAC com Aprovação</strong>
           <p>Cadastro, versionamento e fluxo formal de aprovação digital de documentos relativos ao PAC.</p>
@@ -562,7 +443,7 @@
       </div>
 
       <div class="feature-item">
-        <div class="feature-icon">✓</div>
+        <div class="feature-icon"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.2l3 3L13 4.8"/></svg></div>
         <div class="feature-text">
           <strong>Planos de Monitoramento &amp; Planos de Ação</strong>
           <p>Cadastro de itens avaliados, frequências de monitoramento, limites críticos e geração automática de Planos de Ação.</p>
@@ -678,15 +559,15 @@
           </tr>
           <tr>
             <td><strong>Fotos e Anexos nos Monitoramentos</strong></td>
-            <td style="text-align: center;" class="check-icon">✓</td>
-            <td style="text-align: center;" class="check-icon">✓</td>
-            <td style="text-align: center;" class="check-icon">✓</td>
+            <td style="text-align: center;" class="check-icon"></td>
+            <td style="text-align: center;" class="check-icon"></td>
+            <td style="text-align: center;" class="check-icon"></td>
           </tr>
           <tr>
             <td><strong>PAC Padrão do Setor (Sistema Pronto para Usar)</strong></td>
             <td style="text-align: center; color: var(--text-muted);">—</td>
-            <td style="text-align: center;" class="check-icon">✓</td>
-            <td style="text-align: center;" class="check-icon">✓</td>
+            <td style="text-align: center;" class="check-icon"></td>
+            <td style="text-align: center;" class="check-icon"></td>
           </tr>
           <tr>
             <td><strong>Consultoria de Implantação Personalizada</strong></td>
@@ -769,8 +650,8 @@
   </div>
 
   <footer>
-    <strong>FoodTech Consultoria em Qualidade e Segurança Alimentar</strong> | CNPJ 46.390.469/0001-85<br>
-    Rua Dourados, 324, Bataguassu – MS | (18) 99650-7371 | contato@foodtech.net.br
+    <strong>FOODTECH CONSULTORIA, INSPECAO SANITARIA E SOLUCOES DIGITAIS LTDA</strong> | CNPJ 62.777.166/0001-76<br>
+    Rua Princesa Isabel, 1094, Centro, Dracena – SP, CEP 17.900-159 | (18) 9650-7371 | SGQBRASIL@GMAIL.COM
   </footer>
 </div>
 
